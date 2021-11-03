@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker::create('au_AU');
+        $faker = Faker::create('es_ES');
         $faker->seed(123);
         $daftar_titel = ["M.Kom", "M.Sc", "M.T", "M.Si"];
         for ($i = 0; $i < 5; $i++) {
