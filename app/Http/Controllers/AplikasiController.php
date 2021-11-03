@@ -156,4 +156,13 @@ class AplikasiController extends Controller
         echo "Setelah update: $beasiswa->nama diambil oleh
             {$beasiswa->beasiswaable->nama}";
     }
+
+    public function delete()
+    {
+        $dosen = Dosen::where('nama', 'Lessie Hamill M.T')->first();
+        $dosen->delete();
+        $dosen->beasiswa()->delete();
+
+        echo "Beasiswa $dosen->nama sudah dihapus";
+    }
 }
